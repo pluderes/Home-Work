@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork</title>
+  </head>
+  <body>
+    <h1>Learn JS</h1>
+  </body>
+  <script>
+    // I.let, var, const
+    //      1. var, const can be used for variable declaration.
+    //      2. the main difference between var and let is that instead of being function scoped, let is block scoped and var is function scoped.
+    //      3. that variables declared with let can be re-assigned, but variables declared with const can’t be.
+    //      4. + let: for variable can update but can't be re-declared.
+    //         + const: for variables that have a certain value and don't want to be changed.
+    //         + var: for variable can be re-declared, update.
+
+    //-------------------------------------------------------------------------------------
+    // II. Boolean
+    //      1. Boolean is a data type where the data only has two possible variables: true or false.
+    //      2. True or false
+
+    //-------------------------------------------------------------------------------------
+    // III.
+    //      a. 7 numbers, staring from 0 (no ueser input)
+    // for (let i = 0; i <= 7; i++) {
+    //   console.log(i);
+    // }
+
+    //      b. n numbers, starting from 0, n entered by user
+    // let a = Number(prompt(`b.Input number: `));
+    // for (let i = 0; i <= a; i++) {
+    //   console.log(i);
+    // }
+
+    //      c. A sequence numbers, staring from 3, ending before n, n entered by user
+    // let c = Number(prompt(`c.Input number: `));
+    // if (c < 3) {
+    //     console.log(`c < 3`);
+    // } else {
+    //   for (let i = 3; i <= c; i++) {
+    //       console.log(i);
+    //   }
+    // }
+
+    //      d. A sequence of numbers, starting from c, ending before n, c and n entered by user
+    // let n1 = Number(prompt(`Enter n1: `));
+    // let d = Number(prompt(`Enter d: `));
+    // for(let i=d;i<n1;i++){
+    //     console.log(i);
+    // }
+
+    //      e. A sequence of numbers, starting from c, ending before n, stepping by 3, c and n entered by user
+    // let n2 = Number(prompt(`Enter n2: `));
+    // let e = Number(prompt(`Enter c: `));
+    // for(let i=e;i<n2;i+=3){
+    //     console.log(i);
+    // }
+
+    //      f. A sequence of numbers, starting from c, ending before n, stepping by s. c, n and s entered by user
+    // let n3 = Number(prompt(`Enter n3: `));
+    // let c1 = Number(prompt(`Enter c1: `));
+    // let s = Number(prompt(`Enter s: `));
+    // for(let i=c1;i<n3;i+=s){
+    //     console.log(i);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    // IV.Write a program to calculate the factorial of n: (1 * 2 * 3 *... *n), n enter by user
+    //      a. Factirial
+    // let a = Number(prompt(`Enter a number: `));
+    // let s = 1;
+    // for (let i = 1; i <= a; i++) {
+    //   s *= i;
+    // }
+    // alert(`The factorial of ${a} is ${s}`);
+    //      b. exponential 
+    // let a1 = Number(prompt(`Enter a number: `));
+    // let s1 = Math.pow(a1,a1-1);
+    // alert(`The exponential of ${a1} is ${s1}`);
+
+    //-------------------------------------------------------------------------------------
+    // V.Write a program asking users their age, and then decide if they are old enough to view a 14+ content
+    // let age = Number(prompt("How old are you?"));
+    // if(age < 14){
+    //   alert(`You are not old enought to view this contect`);
+    // }else{
+    //   alert(`Enjoy`);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    // VI.Write a program asking user to enter a number, x, then check if x is in the lower half or higher half of 0 - 9 range
+    // let x1 = Number(prompt(`Enter a number: `));
+    // if(x1 < 9/2){
+    //   alert(`Lower haft of 9`);
+    // }else{
+    //   alert(`Highter haft of 9`);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    // VII.Write a program asking user to enter two numbers, x and n, then check if x is in lower half or higher half of n
+    // let n4 = Number(prompt(`n = `));
+    // let x1 = Number(prompt(`x = `));
+    // if(x1 < n4/2){
+    //   alert(`${x1} is in lower haft of ${n4}`);
+    // }else{
+    //   alert(`${x1} is in highter haft of ${n4}`);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    // VIII.Write a script to check if a number is even (divisible by 2) or odd number
+    // let x2 = Number(prompt(`x = `));
+    // if(x2%2===0){
+    //   alert(`${x2} is even number`);
+    // }else{
+    //   alert(`${x2} is odd number`);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    // IX.Write a program to print out
+    // a. 6 L’s and H’s, half L’s, half H’s (L means low, H means high)
+    // for(let i=1;i<=6;i++){
+    //     if(i<==3){
+    //         console.log(`L`);
+    //     }else{
+    //         console.log(`H`);
+    //     }
+    // }
+
+    // b.n L’s and H’s in total, n entered by user
+    // let n = Number(prompt(`Enter a number: `));
+    // for(let i=1;i<=n;i++){
+    //     if(i<==n/2){
+    //         console.log(`L`);
+    //     }else{
+    //         console.log(`H`);
+    //     }
+    // }
+
+    // c.8 1’s and 0’s in total, consecutively
+    // for(let i=1;i<=8;i++){
+    //     if(i%2===0){
+    //         console.log(`1`);
+    //     }else{
+    //         console.log(`0`);
+    //     }
+    // }
+
+    // d.n 1’s and 0’s in total, consecutively, n entered by user
+    // let n = Number(prompt(`Enter a number: `));
+    // for(let i=1;i<=n;i++){
+    //     if(i%2===0){
+    //         console.log(`1`);
+    //     }else{
+    //         console.log(`0`);
+    //     }
+    // }
+
+    //-------------------------------------------------------------------------------------
+    //X.Write a script to calculate the BMI (Body Mass Index) of a person, the formula is as follows
+    // BMI (Body Mass Index):
+    // BMI = mass (kg) / (height(m) x height(m))
+    // Note: you must do the conversion from cm to m before calculation
+    // And then based on the calculated BMI, tell them that they are:
+    // ● Severely underweight if BMI &lt; 16
+    // ● Underweight if BMI is between 16 and 18.5
+    // ● Normal if BMI is between 18.5 and 25
+    // ● Overweight if BMI is between 25 and 30
+    // ● Obese if BMI is more than 30
+    // let weight = Number(prompt(`Your weight in kg?`));
+    // let height = Number(prompt(`Your height in cm?`));
+    // let BMI = weight*10000/(height*height);
+    //
+    // alert(`Your BMI is ${BMI}`);
+    // if(BMI<16){
+    //     alert(`You are severely underweight`);
+    // }else if(BMI>=16&&BMI<18.5){
+    //     alert(`You are underweight`);
+    // }else if(BMI>=18.5&&BMI<25){
+    //     alert(`You are normal`);
+    // }else if(BMI>=25&&BMI<30){
+    //     alert(`You are overweight`);
+    // }else{
+    //     alert(`You are obese`);
+    // }
+
+    //-------------------------------------------------------------------------------------
+    //XI.Use JS Turtle, to draw the following shapes
+    
+  </script>
+</html>
