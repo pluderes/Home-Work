@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // Vong lap, cau lenh dieu kien
+    //------------------------------------------------------------
+    // I.Vong lap
+    // 1.While
+    // let x = 0;
+    // while (x < 5) {
+    //   x++;
+    //   console.log("a" + x);
+    // }
+    // // 2.For
+    // for (let i = 1; i <= 5; i++) {
+    //   x++;
+    //   console.log("less" + x);
+    // }
+    // //ex:
+    // let y = Number(prompt('Input number: '));
+    // for(let i=0;i<y;i++){
+    //     console.log(`y${i}`);
+    // }
+    // for(let i=0;i<=y;i++){
+    //   if(i%2===0){
+    //       console.log(i);
+    //     }
+    // }
+    // For: da xac dinh dc so lan lap.
+    // While: chua xac dinh so lan lap.
+
+    //------------------------------------------------------------
+    // II.Blended learning
+
+    //------------------------------------------------------------
+    // III.Cau lenh dieu kien IF ELSE
+    let input=Number(prompt('Input number: '));
+    let total=0;
+    for(let i=0;i<=input;i++){
+      total += i;
+    }
+    console.log(`Total: ${total}`);
+    let age = Number(prompt("Enter your age: "));
+    if(age < 18){
+      alert(`Dont have enought age! Come back late!`);
+    }else{
+      alert(`Welcome!`);
+    }
+    let m = Number(prompt(`Input month: `));
+    if(m>=1&&m<=12&&Number.isInteger(m)){
+      if (m >= 1 && m <= 3) {
+        alert(`This month is Spring!`);
+      } else if (m >= 4 && m <= 6) {
+        alert(`This month is Summer!`);
+      } else if (m >= 7 && m <= 9) {
+        alert(`This month is Autumn!`);
+      } else if (m >= 10 && m <= 12) {
+        alert(`This month is Winter!`);
+      } else {
+        alert(`It's not a month of year!`);
+      }
+    }
+    let user = prompt(`Enter username: `);
+    let pass = prompt(`Enter password: `);
+    if (user === `mindx` && pass === `123456`) {
+      alert(`Login successful!`);
+    } else if (user === `mindx` && pass !==`123456` || pass===``){
+      alert(`Password is incorrect!`);
+    }else if(user !== `mindx` || user===`` && pass ===`123456`){
+      alert(`Username is incorrect!`);
+    }
+    else{
+      alert(`Username and password are incorrect!`)
+    }
+  </script>
+</html>
