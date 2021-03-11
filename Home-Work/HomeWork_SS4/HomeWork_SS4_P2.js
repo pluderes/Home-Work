@@ -805,28 +805,27 @@ const jobData = {
 
 //------------------------------------------------------------------------------------------------
 // XVI.
-const oldData = {
-  fireRide: {
-    price: 30,
-    vnName: `Com rang dua bo`,
-  },
-  noddle: {
-    price: 20,
-    vnName: `My tom chanh`,
-  },
-  pho: {
-    price: 35,
-    vnName: `Pho bo tai chin`,
-  },
-};
+// const oldData = {
+//   fireRide: {
+//     price: 30,
+//     vnName: `Com rang dua bo`,
+//   },
+//   noddle: {
+//     price: 20,
+//     vnName: `My tom chanh`,
+//   },
+//   pho: {
+//     price: 35,
+//     vnName: `Pho bo tai chin`,
+//   },
+// };
 // console.log(`----------------------------------------------`);
 // console.log(oldData);
 // keyword: delete
 // delete oldData.noddle;
 // console.log(`----------------------------------------------`);
 // console.log(oldData);
-
 // create new obj
-let newData = {};
-Object.setPrototypeOf(newData,oldData.pho);
-console.log(newData);
+
+// let newData = Object.assign({},oldData);
+// console.log(newData);

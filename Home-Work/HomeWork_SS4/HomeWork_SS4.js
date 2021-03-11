@@ -127,31 +127,31 @@ products.push(prd1, prd2, prd3, prd4);
 //   i++;
 // }
 // V.5.
-// let p = prompt(`Enter provider`);
-// if (p !== ``) {
-//   let prov = p.toLocaleLowerCase();
-//   let dem = 0;
-//   for (let i = 0; i < products.length; i++) {
-//     products[i][`Providers`] = products[i][`Providers`].toLowerCase();
-//     let x = products[i][`Providers`].indexOf(prov);
-//     if (x >= 0) {
-//       console.log(`-----------------------------`);
-//       console.log(`Name: ` + products[i].Name);
-//       console.log(`Brand: ` + products[i].Brand);
-//       console.log(`Price: ` + products[i].Price);
-//       console.log(`Color: ` + products[i].Color);
-//       console.log(`Category: ` + products[i].Category);
-//       console.log(`Privider: ` + products[i].Providers);
-//       dem++;
-//     }
-//   }
-//   if (dem === 0) {
-//     console.log(`Does not have provider!`);
-//   }
-// } else if (p === ``) {
-//   console.log(`-----------------------------`);
-//   console.log(`Null`);
-// }
+let p = prompt(`Enter provider`);
+if (p !== ``) {
+  let prov = p.toLocaleLowerCase();
+  let dem = 0;
+  for (let i = 0; i < products.length; i++) {
+    products[i][`Providers`] = products[i][`Providers`].toLowerCase();
+    let x = products[i][`Providers`].indexOf(prov);
+    if (x >= 0) {
+      console.log(`-----------------------------`);
+      console.log(`Name: ` + products[i].Name);
+      console.log(`Brand: ` + products[i].Brand);
+      console.log(`Price: ` + products[i].Price);
+      console.log(`Color: ` + products[i].Color);
+      console.log(`Category: ` + products[i].Category);
+      console.log(`Privider: ` + products[i].Providers);
+      dem++;
+    }
+  }
+  if (dem === 0) {
+    console.log(`Does not have provider!`);
+  }
+} else if (p === ``) {
+  console.log(`-----------------------------`);
+  console.log(`Null`);
+}
 
 //---------------------------------------------------------------------------------------
 // VI.
