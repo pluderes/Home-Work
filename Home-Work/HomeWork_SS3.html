@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork SS3</title>
+  </head>
+  <body>
+      <h1>HomeWork SS3</h1>
+  </body>
+  <script>
+    // I.
+    // let a = 5;
+    // let b = 10;
+    // let arr = [];
+    // arr.push(a,b);
+    // console.log(arr);
+    // for(let i=0;i<arr.length-1;i++){
+    //     let tmp = arr[i];
+    //     arr[i] = arr[i+1];
+    //     arr[i+1] = tmp;
+    // }
+    // console.log(arr);
+
+    //----------------------------------------------------------------------------------------------------------
+    // II.
+    // const s = `Hello baeuty there`;
+    // console.log(s);
+    // let a = s.split(` `);
+    // console.log(a);
+
+    //----------------------------------------------------------------------------------------------------------
+    // III.
+    // const a = [4, 5, 7, -8];
+    // console.log(...a);
+
+    //----------------------------------------------------------------------------------------------------------
+    // IV.
+    // let a = `Jeans, T-Shirt, Socks`;
+    // let item = [];
+    // item = a.split(`, `);
+    // console.log(item);
+    // let k;
+    // while (true) {
+    //   k = String(
+    //     prompt(
+    //       `Hi there, welcome to shop admin panel, what do you want (C, R, U, D)?`
+    //     )
+    //   );
+    //   if (k === `C` || k === `c`) {
+    //     let c = prompt(`Enter the name of the new item`);
+    //     item.push(c);
+    //     alert(`Done`);
+    //     console.log(item);
+    //   } else if (k === `R` || k === `r`) {
+    //     for (let i = 0; i < item.length; i++) {
+    //       console.log(`${i + 1}. ` + item[i]);
+    //     }
+    //     break;
+    //   } else if (k === `U` || k === `u`) {
+    //     let pos = Number(prompt(`Enter the position you want to update`));
+    //     if (isNaN(pos) || !pos) {
+    //       alert(`Not a number`);
+    //     } else if (!isNaN(pos) && pos > item.length - 1) {
+    //       alert(`More than the lenght!`);
+    //     } else if (!isNaN(pos) && pos <= item.length - 1) {
+    //       let nname = String(prompt(`Enter the new name`));
+    //       item[pos] = nname;
+    //       alert(`Done`);
+    //       console.log(item);
+    //     }
+    //   } else if (k === `D` || k === `d`) {
+    //     let pos = Number(prompt(`Enter the position you want to delete`));
+    //     if (isNaN(pos) || !pos) {
+    //       alert(`Not a number`);
+    //     } else if (!isNaN(pos) && pos > item.length - 1) {
+    //       alert(`More than the lenght!`);
+    //     } else if (!isNaN(pos) && pos <= item.length - 1) {
+    //       item.splice(pos, 1);
+    //       alert(`Done`);
+    //       console.log(item);
+    //     }
+    //   } else if (
+    //     k !== `C` ||
+    //     k !== `c` ||
+    //     k !== `R` ||
+    //     k !== `r` ||
+    //     k !== `U` ||
+    //     k !== `u` ||
+    //     k !== `D` ||
+    //     k !== `d`
+    //   ) {
+    //     alert(`This command is not supported`);
+    //     console.log(k);
+    //   }
+    // }
+
+    //----------------------------------------------------------------------------------------------------------
+    // V.
+    // let a = prompt(`Enter a squence of number, separated by commas (,)`);
+    // let s = [];
+    // let total = 0;
+    // s = a.split(`,`);
+    // console.log(s);
+    // for(let i=0;i<s.length;i++){
+    //     total += Number(s[i]);
+    //     console.log(total);
+    // }
+    // alert(`The sum of them is: ${total}`);
+
+    //----------------------------------------------------------------------------------------------------------
+    // VI.
+    // let a = prompt(`Enter a squence of number, separated by commas (,)`);
+    // let s = [];
+    // let min;
+    // s = a.split(`,`);
+    // console.log(s);
+    // min = Math.min(...s);
+    // alert(`The smallest number is: ${min}`);
+
+    //----------------------------------------------------------------------------------------------------------
+    // VII.
+    // let a;
+    // let s = [3, 4, 6, -9, 10, -88, 2];
+    // console.log(s);
+    // let i=0;
+    // while(i<s.length){
+    //     a = Number(prompt(`Enter a number`));
+    //     if(a === s[i]){
+    //         alert(`${a} in FOUND in my array at index ${i}`);
+    //         i=s.length;
+    //     }else {
+    //         alert(`${a} in NOT FOUND in my array`);
+    //     }
+    // }
+
+    //----------------------------------------------------------------------------------------------------------
+    // VIII.
+    // let arr = [5, 7, 300, 90, 24, 50, 75];
+    // let max;
+    // let x;
+    // let total = 0;
+    // console.log(`Hello, my name is Trung and here is my sheep sizes: \n` + arr);
+    // max = Math.max(...arr);
+    // console.log(`\nNow my biggest sheep has size ${max}, let shave it`);
+    // x = arr.indexOf(max);
+    // arr[x] = 8;
+    // console.log(`\nAfter shearing, here is my flock \n` + arr);
+    // for (let i = 1; i <= 3; i++) {
+    //   if (i < 3) {
+    //     for (let j = 0; j < arr.length; j++) {
+    //       arr[j] += 50;
+    //     }
+    //     console.log(
+    //       `\nMOUNTH ${i} \nOne month has, passed, my sheeps have grown, here are their sizes\n ` +
+    //         arr
+    //     );
+    //     max = Math.max(...arr);
+    //     console.log(`\nNow my biggest sheep has size ${max}, let shave it`);
+    //     let x = arr.indexOf(max);
+    //     arr[x] = 8;
+    //     console.log(`\nAfter shearing, here is my flock \n` + arr);
+    //   } else {
+    //     for (let j = 0; j < arr.length; j++) {
+    //       arr[j] += 50;
+    //     }
+    //     console.log(
+    //       `\nMOUNTH ${i} \nOne month has, passed, my sheeps have grown, here are their sizes\n ` +
+    //         arr
+    //     );
+    //     for (let j = 0; j < arr.length; j++) {
+    //       total += arr[j];
+    //     }
+    //     console.log(`\nMy flock has size in total: ${total}`);
+    //     console.log(`I would get: ${total} * 2$ = ` + total * 2 + `$`);
+    //   }
+    // }
+
+    //----------------------------------------------------------------------------------------------------------
+    // X.
+    // let input = prompt(`Enter a sequence of names, separated by commas (,)`);
+    // let arr = input.split(`, `);
+    // console.log(arr);
+    // let arr1 = arr.map((val,i,arr)=>{
+    //     return `<`+val+`>`;
+    // });
+    // console.log(arr1);
+    // alert(arr + ` => ` + arr1);
+
+    //----------------------------------------------------------------------------------------------------------
+    // XI.
+    // let input = prompt(`Enter a sequence number, separated by commas (,)`);
+    // let arr = input.split(`,`);
+    // let arr1 = [];
+    // console.log(arr);
+    // for(let i=0;i<arr.length;i++){
+    //     if(Number(arr[i])%2!==0){
+    //         arr1.push(arr[i]);
+    //     }
+    // }
+    // console.log(arr1);
+    // alert(arr + ` => ` + arr1);
+  </script>
+</html>

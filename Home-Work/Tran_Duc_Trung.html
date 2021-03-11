@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWord</title>
+</head>
+<body>
+    <h1>Learn JS</h1>
+</body>
+<script>
+    // I.read about variables, data types and answer questions:
+    // 1.invalid variable names
+    //      - contains special characters like & * % ( , )
+    //      Ex: let &you;   
+    //      - start with numbers
+    //      Ex: let 4you;
+    //      - matches with keywords like var, let, for, if,...
+    //      Ex: let if;
+    //      - declare the same variable 2 times
+    //      Ex: let x=1; let x=3;
+    // 2.how to check variable data type
+    //      - use 'typeof'
+    //      Ex: let x=1;
+    //          console.log(typeof(x))
+
+//-------------------------------------------------------------------------------------
+    // II.review about HTML, CSS, JS
+    //      - 1-b, 2-a, 3-e, 4-c
+    
+//------------------------------------------------------------------------------------- 
+    // III.Declare the following variables
+        let message = 'coding is great';
+        console.log(`${message}`);
+        let studentCount = 0;
+        console.log(`${studentCount}`);
+
+//-------------------------------------------------------------------------------------
+    // IV.Update the declared variables in Exercise 3 
+    message = 'Coding might not be easy, but still great';
+    console.log(`${message}`);
+    studentCount = 13;
+    console.log(`${studentCount}`);
+    message = message.toLocaleLowerCase();
+    console.log(`${message}`);
+    studentCount = studentCount+1;
+    console.log(`${studentCount}`);
+
+//-------------------------------------------------------------------------------------
+    // V.Write a script to show user a nice message
+    alert(`You are so beautiful`);
+
+//-------------------------------------------------------------------------------------
+    // VI.Write a script to ask user about their name, and then say hi to them, say something nice to them if you want :)
+    let name = prompt(`Hi, give me a name please!`);
+    alert(`${name} is an angel!`);
+//------------------------------------------------------------------------------------- 
+    // VII.Write a script that ask 2 things from users, their first name and last name, then greet them with their full name
+    let fisrtname = prompt(`Your first name?`);
+    let lastname = prompt(`Your last name?`);
+    alert(`Welcome to our family, ${lastname} ${fisrtname}!`);
+//-------------------------------------------------------------------------------------
+    // VIII.Write a script that calculates the area of a square
+    let x = prompt(`Enter side lenght of the square`);
+    x *= x;
+    alert(`Area of the square is ${x}`);
+
+//-------------------------------------------------------------------------------------
+    // IX.Write a script that calculates the area of a circle
+    let rad = Number(prompt(`Enter the radius of the circle`));
+    s = Math.pow(rad,2)*Math.PI;
+    s = s.toFixed(2);
+    alert(`Area of the circle is ${s}`);
+//-------------------------------------------------------------------------------------
+    // X.Write a script that converts Celsius ( 0 C) into Fahrenheit ( 0 F)
+    let C = Number(prompt(`Enter the temprature in Celcius`));
+    let F;
+    F = (C*1.8 + 32).toFixed(2);
+    alert(`${C}{C} = ${F}{F}`);
+</script>
+</html>
