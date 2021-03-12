@@ -827,5 +827,5 @@ const oldData = {
 // console.log(oldData);
 // create new obj
 // let newData = Object.assign({},oldData.fireRide,oldData.pho);
-let {...noddle,newData}=oldData;
+let {noddle,...newData}=oldData;
 console.log(newData);
