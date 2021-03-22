@@ -117,16 +117,12 @@ let items = [`Backpack`, `MiBacnd watch`, `Ring`];
 console.log(items);
 // 3.
 let testlst = document.getElementById(`testlist`);
+let listli = testlst.getElementsByTagName(`li`);
 // console.log(testlst);
 for (let i = 0; i < items.length; i++) {
   testlst.insertAdjacentHTML(`beforeend`, `<li>${items[i]}</li>`);
 }
 // 4.
-// let x = document.getElementsByClassName(`testli`);
-// // for (let i = 0; i <x.length; i++) {
-// //   x[i].remove();
-// // }
-// console.log(testlst);
 // 5.
 const inputAdd = document.getElementById(`inpAdd`);
 const btnAdd = document.getElementById(`btnAdd`);
@@ -137,18 +133,19 @@ console.log(inputAdd);
 console.log(btnAdd);
 // 7,8,9,10,11.
 btnAdd.addEventListener("click", function () {
-  // testlst.insertAdjacentElement(`beforeend`,`<li>${inputAdd.value}}</li>`);
-  testlst.innerHTML += `<div><li>${inputAdd.value}<button style="margin-left: 5px;">remove</button></li></div>`;
+  listli.insertAdjacentElement(`afterend`,`<li>${inputAdd.value}}</li>`);
+//   testlst.innerHTML += `<div><li>${inputAdd.value}<button style="margin-left: 5px;">remove</button></li></div>`;
   console.log(listli);
 });
 // 12,13,14,15,16.
-let listli = testlst.getElementsByTagName(`li`);
+
 for (let i = 0; i < listli.length; i++) {
   // listli[i].insertAdjacentHTML("beforeend",`<button>remove</button>`);
   listli[i].innerHTML += `<button style="margin-left: 5px;">remove</button>`;
 }
 for (let i = 0; i < listli.length; i++) {
     listli[i].onclick = function(){
+      console.log(i);
         listli[i].remove();
     }
 }
