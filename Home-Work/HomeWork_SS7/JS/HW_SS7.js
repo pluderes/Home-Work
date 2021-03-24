@@ -112,40 +112,29 @@ function upperName() {
 
 // --------------------------------------------------
 // XII.
-// 1.
 let items = [`Backpack`, `MiBacnd watch`, `Ring`];
 console.log(items);
-// 3.
-let testlst = document.getElementById(`testlist`);
-let listli = testlst.getElementsByTagName(`li`);
-// console.log(testlst);
-for (let i = 0; i < items.length; i++) {
-  testlst.insertAdjacentHTML(`beforeend`, `<li>${items[i]}</li>`);
-}
-// 4.
-// 5.
-const inputAdd = document.getElementById(`inpAdd`);
-const btnAdd = document.getElementById(`btnAdd`);
-inputAdd.placeholder = `New Item`;
-btnAdd.innerHTML = `Add`;
-// 6.
-console.log(inputAdd);
-console.log(btnAdd);
-// 7,8,9,10,11.
-btnAdd.addEventListener("click", function () {
-  listli.insertAdjacentElement(`afterend`,`<li>${inputAdd.value}}</li>`);
-//   testlst.innerHTML += `<div><li>${inputAdd.value}<button style="margin-left: 5px;">remove</button></li></div>`;
-  console.log(listli);
-});
-// 12,13,14,15,16.
+let list_ul = document.getElementById(`testlist`);
+for(let i = 0;i<items.length; i++){
+  list_ul.innerHTML += `<li>${items[i]}<button class="btnRemove" style="margin-left: 5px;">Remove</button></li>`;
+} 
 
-for (let i = 0; i < listli.length; i++) {
-  // listli[i].insertAdjacentHTML("beforeend",`<button>remove</button>`);
-  listli[i].innerHTML += `<button style="margin-left: 5px;">remove</button>`;
+const inp = document.getElementById(`inpText`); 
+const btnadd = document.getElementById(`btnAdd`);
+const btnremoves = document.getElementsByClassName(`btnRemove`);
+
+loadRemovebutton();
+
+btnadd.onclick = function () {
+  list_ul.innerHTML += `<li>${inp.value}<button class="btnRemove" style="margin-left: 5px;">Remove</button></li>`;
+  inp.value = "";
+  loadRemovebutton()
 }
-for (let i = 0; i < listli.length; i++) {
-    listli[i].onclick = function(){
-      console.log(i);
-        listli[i].remove();
-    }
+
+function loadRemovebutton() {
+  for( const btn of btnremoves){
+    btn.addEventListener("click",function () {
+      this.parentNode.remove();
+    });
+  }
 }
