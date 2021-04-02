@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feeling hungry?</title>
+    <link rel="stylesheet" href="CSS/SS10_LAB.css" />
+  </head>
+  <body>
+    <header></header>
+    <section id="hero-image">
+      <div class="hero-content text-center">
+        <h1>Feeling Hungry?</h1>
+        <p>Get a random meal by clicking below</p>
+      </div>
+      <a href="#" class="btn-GETMEAL">GET MEAL</a>
+    </section>
+    <section id="detail">
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td id="tdIMG">
+            <img id="imgFood" src="" alt="meal" />
+          </td>
+          <td id="detail">
+              <h1 id="meal"></h1>
+              <p id="category"></p>
+              <p id="area"></p>
+              <p id="tags"></p>
+              <p id="instructions"></p>  
+          </td>
+        </tr>
+      </table>
+      <div>
+          <p style="font-weight: bold; font-size: larger;">Ingredients:</p>
+          <ul id="listIngred"></ul>
+      </div>
+    </section>
+    <section>
+        <p style="font-weight: bold; font-size: larger;">Video Recipe</p>
+        <iframe id="link" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+  </body>
+  <script src="JS/SS10_LAB.js"></script>
+</html>
