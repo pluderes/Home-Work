@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS8</title>
+    <!-- <link type="text/css" rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="CSS/SS8.css" />
+  </head>
+  <body>
+    <h4>B1</h4>
+    <div>
+      <button onclick="Down()" id="btndecre">-</button>
+      <input id="inpN" type="text" disabled="disabled" value="0" />
+      <button onclick="Up()" id="btnincre">+</button>
+    </div>
+    <hr />
+    <h4>B2</h4>
+    <div>
+      <input type="number" name="" id="timeN" />
+      <button onclick="startTime()" id="btnStart">Start</button>
+      <button onclick="stopTime()" id="btnStop">Stop</button>
+      <p id="result"></p>
+    </div>
+    <hr />
+    <h4>B3</h4>
+    <div>
+      <button id="reload">Reload</button>
+      <br />
+      <div>
+        <p id="quotetext">QuoteText</p>
+        <p id="quoteauthor">QuoteAuthor</p>
+      </div>
+    </div>
+    <hr />
+    <h4>B4</h4>
+    <div>
+      <div>
+        <input type="text" name="" id="inpProject" placeholder="Enter project">
+        <input type="text" name="" id="inpTask" placeholder="Enter task">
+        <input type="number" name="" id="inpTimespent" placeholder="Time spent">
+        <button type="submit" id="btnAdd">Add</button>
+      </div>
+      <br>
+      <table id="table">
+        <tbody id="tbody">
+          <tr id="thead">
+            <th>Project</th>
+            <th>Task</th>
+            <th>Time Spent</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="JS/SS8.js"></script>
+</html>
