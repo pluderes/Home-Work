@@ -76,6 +76,7 @@
 /* detail */
 #detail>h1{
     font-size: 40px;
+    text-decoration: underline;
 }
 #detail>p{
     font-size: 20px;
@@ -86,4 +87,10 @@
 #tdIMG{
     text-align: center;
     width: 500px;
+}
+table{
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 0px 14px 0px grey;
+    margin: 10px;
 }

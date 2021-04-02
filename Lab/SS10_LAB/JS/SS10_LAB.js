@@ -1,38 +1,55 @@
 async function getDataAPI() {
-  let promise = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/random.php?fbclid=IwAR1A9ETQ9UO1eOptf9qb2k7Og-m3RCj-aPIq8vhOqNNG7iqhC7d_dS1vfvs`
-  );
+  let promise = await fetch(`https://sheetdb.io/api/v1/uo37nyuvbu1k8`);
   let data = await promise.json();
   console.log(data);
 
-  let food = data.meals[0];
-
   let thumb = document.getElementById(`imgFood`);
-  let meal = document.getElementById(`meal`);
-  let cate = document.getElementById(`category`);
-  let area = document.getElementById(`area`);
-  let tag = document.getElementById(`tags`);
-  let instruc = document.getElementById(`instructions`);
-  let link = document.getElementById(`link`);
-  let ingred = document.getElementById(`listIngred`);
+  let name = document.getElementById(`name`);
+  let introduce = document.getElementById(`introduce`);
+  let address = document.getElementById(`address`);
+  let review = document.getElementById(`review`);
+  // let link = document.getElementById(`link`);
+  // let ingred = document.getElementById(`listIngred`);
 
-  thumb.src = food.strMealThumb;
-  meal.innerHTML += `${food.strMeal}`;
-  cate.innerHTML += `<p style="font-weight: bold;">Category:  ${food.strCategory}</p>`;
-  area.innerHTML += `<p style="font-weight: bold;">Area: ${food.strArea}</p> `;
-  tag.innerHTML += `<p style="font-weight: bold;">Tags:  ${food.strTags}</p>`;
-  instruc.innerHTML += `<p style="font-weight: bold;">Instructions: </p> ${food.strInstructions}`;
-  link.src = convertToEmbedUrl(food.strYoutube);
+  let size = Object.keys(data).length;
+  console.log(size);
 
-  function convertToEmbedUrl(youtubeUrl) {
-    return youtubeUrl.replace("watch?v=", "embed/");
-}
+  let index = Math.floor(Math.random() * size+1);
 
-let size = Object.keys(food).length;
-console.log(size);
+  thumb.src = data[index].Image;
+  name.innerHTML += `${data[index].Name}`;
+  address.innerHTML += `<p style="font-weight: bold;">Address: </p> ${data[index].Address}`;
+  introduce.innerHTML += `<p style="font-weight: bold;">Instructions: </p> ${data[index].Introduce}`;
+  review.innerHTML += `<p style="font-weight: bold;">Review: <a href="${data[index].Review}">${data[index].Review}</a></p>`;
+  //------------------------------------------------------------
+  // let food = data.meals[0];
 
-for(let i=1;i<size;i++){
-    if()
-}
+  // let thumb = document.getElementById(`imgFood`);
+  // let meal = document.getElementById(`meal`);
+  // let cate = document.getElementById(`category`);
+  // let area = document.getElementById(`area`);
+  // let tag = document.getElementById(`tags`);
+  // let instruc = document.getElementById(`instructions`);
+  // let link = document.getElementById(`link`);
+  // let ingred = document.getElementById(`listIngred`);
+
+  // thumb.src = food.strMealThumb;
+  // meal.innerHTML += `${food.strMeal}`;
+  // cate.innerHTML += `<p style="font-weight: bold;">Category:  ${food.strCategory}</p>`;
+  // area.innerHTML += `<p style="font-weight: bold;">Area: ${food.strArea}</p> `;
+  // tag.innerHTML += `<p style="font-weight: bold;">Tags:  ${food.strTags}</p>`;
+  // instruc.innerHTML += `<p style="font-weight: bold;">Instructions: </p> ${food.strInstructions}`;
+  // link.src = convertToEmbedUrl(food.strYoutube);
+
+  //   function convertToEmbedUrl(youtubeUrl) {
+  //     return youtubeUrl.replace("watch?v=", "embed/");
+  // }
+
+  // let size = Object.keys(food).length;
+  // console.log(size);
+
+  // for(let i=1;i<size;i++){
+  //     if()
+  // }
 }
 getDataAPI();
