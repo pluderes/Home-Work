@@ -53,3 +53,8 @@ async function getDataAPI() {
   // }
 }
 getDataAPI();
+
+let Reload = document.getElementById('reload');
+Reload.onclick = function () {
+  location.reload();
+}
